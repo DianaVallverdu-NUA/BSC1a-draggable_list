@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  height: 100vh;
+}
+
 img {
   width: 100%;
 }
@@ -12,6 +16,10 @@ a {
   all: unset;
   cursor: pointer;
   text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
 }
 
 /* layout css */
@@ -61,6 +69,10 @@ a {
 
 .bg_beige {
   background-color: beige;
+}
+
+.bg_green {
+  background-color: rgb(113, 220, 113);
 }
 
 .text_white {
