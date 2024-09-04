@@ -42,6 +42,10 @@ a {
   width: 100%;
 }
 
+.height_100 {
+  height: 100%;
+}
+
 /* colour css */
 .bg_marine_blue {
   background-color: #036f8c;
