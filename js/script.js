@@ -13,5 +13,14 @@ function dragEnded() {
   draggedItem = null;
 }
 
+function dragOver() {
+}
+
+// triggered every time a drag starts
 sortableList.addEventListener("dragstart", dragStarted);
+
+// triggered every time dragging ends
 sortableList.addEventListener("dragend", dragEnded);
+
+// triggered every time cursors is dragging something over an element
+sortableList.addEventListener("dragover", dragOver);
