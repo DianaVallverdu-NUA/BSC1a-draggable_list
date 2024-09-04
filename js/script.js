@@ -2,21 +2,29 @@
 
 const sortableList = document.getElementById("sortable");
 let draggedItem = null;
+let overItem = null;
 
 function dragStarted(event) {
   draggedItem = event.target;
   setTimeout(() => (event.target.style.display = "none"));
 }
 
-function dragEnded() {
+function dragEnded(event) {
+  event.preventDefault();
+  sortableList.insertBefore(draggedItem, overItem);
   draggedItem.style.display = "";
   draggedItem = null;
+  overItem = null;
 }
 
 function dragOver(event) {
+  event.preventDefault();
   const tagName = event.target.tagName;
   // not interested in UI element
-  if(tagName === "UL") return;
+  if (tagName === "UL") return;
+
+  // store element that is beign dragged over
+  overItem = event.target;
 }
 
 // triggered every time a drag starts
