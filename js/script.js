@@ -13,7 +13,10 @@ function dragEnded() {
   draggedItem = null;
 }
 
-function dragOver() {
+function dragOver(event) {
+  const tagName = event.target.tagName;
+  // not interested in UI element
+  if(tagName === "UL") return;
 }
 
 // triggered every time a drag starts
